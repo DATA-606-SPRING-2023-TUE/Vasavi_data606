@@ -8,11 +8,10 @@ In this project, I'll analyze and explore a dataset obtained from the "Ease My T
 
 1. What is the difference in ticket prices between Economy and Business class?
 2. Does price vary with Airlines?
-3. How does the price change when tickets are purchased just one or two days before departure?
-4. Is the price of a ticket affected by the departure and arrival times?
-5. How does the price change as the source and destination change?
-6. Does the number of stops have an effect on the price?
-7. What factors have the most influence on price?
+3. Is the price of a ticket affected by the departure and arrival times?
+4. How does the price change as the source and destination change?
+5. Does the number of stops have an effect on the price?
+6. What factors have the most influence on price?
 
 ## Data Collection
 
@@ -22,7 +21,7 @@ When researched, I could not find any API that I could you to scrap data from Ea
 
 The dataset contains flight booking options from the website Easemytrip for flights between India's top six metro cities. The cleaned dataset contains 300261 datapoints and 11 features.
 
-## Features
+## Important Features
 
 + Airline: The airline column stores the name of the airline company. There are six different airlines in this category.
 + Flight: Flight stores data about the plane's flight code. It is a distinguishing feature.
