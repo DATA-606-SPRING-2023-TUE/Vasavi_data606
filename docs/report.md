@@ -42,6 +42,7 @@ It is clear that, here the relationship is not linear but can be approximated wi
 
 I then wanted to see how price is varying when I buy the ticket just 1 or 2 days before the departure. The regression graph here shows the graph for this. It is possible to see two different curves on this graph, the first one, stable between 50 and 20 days before the flight, and a positive monotone curve between 20 and 2 days before. A pattern is clearly visible in the way prices evolve depending on the days left.
 The graph highlights how the prices rise slowly and then drastically start rising 20 days before the flight, but fall just one day before the flight up to three times cheaper. This can be explain by the fact the companies want to fill their empty seats and thus lower the prices of the tickets to ensure the planes remains full.
+
 <img width="656" alt="image" src="https://user-images.githubusercontent.com/56116206/236880679-4cd6a401-7b09-4e20-b27a-669040b4370c.png">
 
 ## 5. Feature Selection
@@ -49,6 +50,7 @@ When it comes to feature selection, the first thing that comes to mind is the co
 
 ## 6. Machine Learning Models
 Since my target variable-Price is a numerical variable, I decided to apply regression models to help predict better. The models I used to predict the price are Linear Regression, XGBRegressor, KNeighboursRegressor and CatBoostRegressor. The r2 score results of these models are as follows:
+
  <img width="182" alt="image" src="https://user-images.githubusercontent.com/56116206/236888430-b71804d8-0e37-4ff0-963a-d78bf6db6b00.png">
 
 
@@ -75,7 +77,7 @@ The first layers will composed with all the different regressor functions. And t
 6. For the time of the flight:
       It seems that departure during early morning is cheaper, and night more expensive.
        It seems that arrival during the early morning is cheaper.
-7. In general, the more stops there are, the more expensive the flight ticket is
+7. In general, the more stops there are, the more expensive the flight ticket is.
 
 
 
