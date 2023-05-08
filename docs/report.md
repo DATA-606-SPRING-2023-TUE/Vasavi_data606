@@ -37,14 +37,52 @@ As expected, flights leaving early in the morning remained the cheapest way to t
 
 We all know that the duration of flight has everything to do with the cost of the ticket. 
 It is clear that, here the relationship is not linear but can be approximated with a second degree curve. The prices reaches a high price at a duration of 20 hours before lowering again.
-![image](https://user-images.githubusercontent.com/56116206/236880184-4ddc2166-043d-47c6-b154-af425192b6a6.png)
 
 <img width="679" alt="image" src="https://user-images.githubusercontent.com/56116206/236880009-59ab5dd6-cf55-4e1e-a85b-a030cc864696.png">
 
 I then wanted to see how price is varying when I buy the ticket just 1 or 2 days before the departure. The regression graph here shows the graph for this. It is possible to see two different curves on this graph, the first one, stable between 50 and 20 days before the flight, and a positive monotone curve between 20 and 2 days before. A pattern is clearly visible in the way prices evolve depending on the days left.
 The graph highlights how the prices rise slowly and then drastically start rising 20 days before the flight, but fall just one day before the flight up to three times cheaper. This can be explain by the fact the companies want to fill their empty seats and thus lower the prices of the tickets to ensure the planes remains full.
-![image](https://user-images.githubusercontent.com/56116206/236880322-dc3f4f2c-3b12-4c77-8214-7371671bd40e.png)
 <img width="656" alt="image" src="https://user-images.githubusercontent.com/56116206/236880679-4cd6a401-7b09-4e20-b27a-669040b4370c.png">
+
+## 5. Feature Selection
+When it comes to feature selection, the first thing that comes to mind is the correlation matrix. The correlation is a good metric for linear relationship but doesn't highlight nonlinear ones. For that I will use mutual information. Mutual information is calculated between two variables and measures the reduction in uncertainty for one variable given a known value of the other variable. A quantity called mutual information measures the amount of information one can obtain from one random variable given another.
+
+## 6. Machine Learning Models
+Since my target variable-Price is a numerical variable, I decided to apply regression models to help predict better. The models I used to predict the price are Linear Regression, XGBRegressor, KNeighboursRegressor and CatBoostRegressor. The r2 score results of these models are as follows:
+ <img width="182" alt="image" src="https://user-images.githubusercontent.com/56116206/236888430-b71804d8-0e37-4ff0-963a-d78bf6db6b00.png">
+
+
+After looking at these results, I decided to try and improve the performance of the XGBRegressor model. 
+
+## 7. Improving model Accuracy
+
+I used Stacking and Blending method to try and improve the model performance. 
+XGBRegressor giving best results may be explained by the fact some relationships are not linear like the duration or the days_left. Thus, a more flexible algorithm like XGBRegressor tends to give better results. For this, I used a technique called stacking and bending. 
+In the essence, stacking makes prediction by using a meta-model trained from a pool of base models — the base models are first trained using training data and asked to give their prediction; a different meta model is then trained to use the outputs from base models to give the final prediction. The process is actually quite simple. To train a base model, K-fold cross validation technique is used.Blending is very similar to Stacking. It also uses base models to provide base predictions as new features and a new meta model is trained on the new features that gives the final prediction. The only difference is that training of the meta-model is applied on a separate holdout set (e.g 10% of train_data)rather on full and folded training set.
+The first layers will composed with all the different regressor functions. And the final layer will be XGBRegressor since it gave the best results.
+
+## 8. Result
+
+<img width="314" alt="image" src="https://user-images.githubusercontent.com/56116206/236891757-661521d2-4bbc-45da-886b-2283727789c4.png">
+
+## 9. Takeaway Points
+
+1. The model that gives the best result is the XGBRegressor with on the test dataset an R^2 score equals to 0.9807 and a MAE score equals to 1688. However, when we use the stacking and bending method, we can reduce the MAE by more than 7% with 1580 and increase the R^2 score to 0.9821.
+2. There is a big gap between flight tickets in business and economy. In average business tickets are 6.5 times more expensive than economy tickets.
+3. Vistara and Air India seems to be the most expensive companies and AirAsia the cheapest. However, for business tickets, only Vistara and AirIndia are available, and Vistara is slightly more expensive.
+4. In general, prices rise quite slowly until 20 days before the flight where the prices rise drastically. But one day before the flight, there usually are empty seats that have not been sold. Thus, it is possible to find tickets three times cheaper than the day before.
+5. The longer the flight is the more expensive the tickets are until it reaches around 20 hours, then the prices tend to decrease.
+6. For the time of the flight:
+      It seems that departure during early morning is cheaper, and night more expensive.
+       It seems that arrival during the early morning is cheaper.
+7. In general, the more stops there are, the more expensive the flight ticket is
+
+
+
+
+
+
+
 
 
 
