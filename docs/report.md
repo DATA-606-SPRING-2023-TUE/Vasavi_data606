@@ -2,6 +2,7 @@
 ## By: Vasavi Koonapalli
 
 Presentation Slides for this project can be found here.
+
 Presentation Video for this project can be found here.
 
 ## 1. Introduction
