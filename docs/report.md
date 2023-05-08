@@ -1,5 +1,4 @@
 # Final Proposal for my Capstone Project on Air Ticket Fare Prediction
-____
 ## By: Vasavi Koonapalli
 
 Presentation Slides for this project can be found here.
