@@ -1,9 +1,9 @@
 # Final Proposal for my Capstone Project on Air Ticket Fare Prediction
 ## By: Vasavi Koonapalli
 
-Presentation Slides for this project can be found here.
+Presentation Slides for this project can be found here: https://docs.google.com/presentation/d/176He7YKPlOoeTY_zDSEQH142Jt32lEkQ/edit?usp=sharing&ouid=117012765111818748232&rtpof=true&sd=true
 
-Presentation Video for this project can be found here.
+Presentation Video for this project can be found here: https://drive.google.com/file/d/162IQuIBpy3PH4fUD1sXVbaHp7Q54Fl8J/view?usp=sharing
 
 ## 1. Introduction
 Booking cheap air tickets can vary in terms of hassle, depending on the individual's preferences, resources, and circumstances. Some factors that can affect the hassle of booking cheap air tickets include Research and comparison, getting hold of the correct timing of the travel that is economic, budget and ticket availability. Overall, the hassle of booking cheap air tickets can be reduced by being organized, flexible, and proactive in your approach. By doing research, staying on top of prices and promotions, and being willing to book in advance or make changes to your travel plans, you can increase your chances of finding the best deal on air tickets. Booking relatively cheaper air tickets has always been a thing on mind for me and with this project, I intend on doing this. 
